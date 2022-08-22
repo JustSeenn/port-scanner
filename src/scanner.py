@@ -42,7 +42,7 @@ def isIP(name):
 def default_scan(name, detail):
     resultArray = []
     defaultPortList = [20,21,22,23,25,53,137,139,445,80,443,8080,8443,1433,1434,3306,3389]
-    with open('src/defaultPort.txt') as f:
+    with open('resource/defaultPort.txt') as f:
         lines = f.readlines()
     if not isIP(name):
         name = gethostbyname(name)
@@ -67,11 +67,13 @@ def default_scan(name, detail):
     
     sys.exit(0)
 def help():
-    print("Usage: python3 scanner.py <ip/url> <port_range_max> <port_range_min>")
     print("\t-u: scan ports from hostname")
     print("\t-i: scan ports from ip")
     print("\t-min: minimum port to scan")
     print("\t-max: maximum port to scan")
+    print("\t-d: detail scan")
+    print("\t-h: help")
+    print('\t--default: scan default ports')
     sys.exit(0) 
 
 if __name__ == '__main__':
