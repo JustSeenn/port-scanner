@@ -1,5 +1,5 @@
 # port-scanner
-A really simple and basic port scanner
+A really simple and basic port scanner by and for all the script kiddies who want to try pentesting
 
 ## Arguments:   
   * (-h) : help,   
